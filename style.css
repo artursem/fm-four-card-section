@@ -16,9 +16,13 @@
     --lgh: hsl(0, 0%, 98%);
 }
 
-div, main {
-    /* border: 1px dashed orange; */
+/* div, main {
+    border: 1px dashed orange;
 }
+
+section {
+    border: 1px dashed pink;
+} */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -50,7 +54,6 @@ header p {
 
 main {
     display: flex;
-    flex-direction: row; /* ################ */
     justify-content: space-around;
     align-items: center;
     padding: 3rem;
@@ -99,6 +102,20 @@ section {
     float: right;
 }
 .card p, img, h3 {
-    margin: 1rem;
+    margin: 1.8rem;
 }
 
+@media (max-width: 900px) {
+    main {
+        flex-direction: column; /* ################ */
+    }
+    section {
+        width: 95%;
+    }
+}
+
+@media (min-width: 901px) {
+    main {
+        flex-direction: row; /* ################ */
+    }
+}
